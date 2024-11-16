@@ -1,12 +1,12 @@
 resource "google_compute_instance" "vm_instance" {
-  name         = "my-vm"
+  name         = "my-terraform-vm"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
   tags         = ["web"]
 
   boot_disk {
     initialize_params {
-      image = "projects/debian-cloud/global/images/family/debian-10"
+      image = "projects/debian-cloud/global/images/family/debian-12"
     }
   }
 
