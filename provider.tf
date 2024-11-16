@@ -1,6 +1,6 @@
 # providers.tf
 provider "google" {
-  credentials = file("gcp_devops.json")
+  credentials = file("${gcp-sa-key}")
   project     = var.project_id
   region      = var.region
 }
